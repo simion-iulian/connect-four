@@ -3,7 +3,6 @@ enum Player {
   TWO("2");
 
   private String number;
-
   Player(String number) {
     this.number = number;
   }
