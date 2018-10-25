@@ -18,4 +18,13 @@ public class GameShould {
     game.play();
     assertThat(game.play(), is("Player 1 has a turn"));
   }
+
+  @Test
+  void not_allow_play_in_a_full_column() {
+    Game game = new Game();
+    for (int i = 0; i < 6; i++) {
+      game.play();
+    }
+    assertThat(game.play(), is("Column full!"));
+  }
 }
