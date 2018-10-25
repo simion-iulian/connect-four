@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6ef072dd-9d6d-4593-a11e-54de5933ffdf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Game.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/GameShould.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Game.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connect4.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/GameShould.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Connect4Should.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Connect4.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Connect4.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/GameStatus.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/GameStatus.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/Connect4Should.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/Connect4Should.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -49,14 +46,14 @@
       <usages-collector id="statistics.js.language.service.starts" />
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="java" value="1053" />
+          <entry key="java" value="1353" />
           <entry key="md" value="120" />
           <entry key="txt" value="15" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JAVA" value="1053" />
+          <entry key="JAVA" value="1353" />
           <entry key="Markdown" value="120" />
           <entry key="PLAIN_TEXT" value="15" />
         </counts>
@@ -68,8 +65,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/Connect4Should.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="132">
-              <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
+            <state relative-caret-position="405">
+              <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
             </state>
           </provider>
         </entry>
@@ -77,9 +74,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Connect4.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
+            <state relative-caret-position="380">
+              <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
               <folding>
+                <element signature="imports" expanded="true" />
                 <element signature="e#110#111#0" expanded="true" />
                 <element signature="e#133#134#0" expanded="true" />
               </folding>
@@ -87,11 +85,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Column.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="308">
-              <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+            <state>
+              <caret column="18" selection-start-column="18" selection-end-column="18" />
               <folding>
                 <element signature="e#97#98#0" expanded="true" />
                 <element signature="e#138#139#0" expanded="true" />
@@ -125,11 +123,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/GameStatus.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="44">
-              <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+              <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
               <folding>
                 <element signature="e#168#169#0" expanded="true" />
                 <element signature="e#212#213#0" expanded="true" />
@@ -516,14 +514,14 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/GameStatus.java" />
         <option value="$PROJECT_DIR$/src/main/java/Player.java" />
         <option value="$PROJECT_DIR$/src/test/java/GameShould.java" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/src/main/java/Game.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Column.java" />
         <option value="$PROJECT_DIR$/src/test/java/Connect4Should.java" />
         <option value="$PROJECT_DIR$/src/main/java/Connect4.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Column.java" />
+        <option value="$PROJECT_DIR$/src/main/java/GameStatus.java" />
       </list>
     </option>
   </component>
@@ -596,7 +594,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540476521026" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1540477108327" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -645,20 +643,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1540466582846</updated>
-      <workItem from="1540466584540" duration="7577000" />
+      <workItem from="1540466584540" duration="8052000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GameShould - 2018.10.25 at 14h 17m 50s.xml">
-      <configuration name="GameShould" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameShould - 2018.10.25 at 14h 25m 12s.xml">
-      <configuration name="GameShould" configurationId="JUnit" />
-    </history-entry>
-    <history-entry file="GameShould - 2018.10.25 at 14h 25m 39s.xml">
-      <configuration name="GameShould" configurationId="JUnit" />
-    </history-entry>
     <history-entry file="GameShould - 2018.10.25 at 14h 26m 55s.xml">
       <configuration name="GameShould" configurationId="JUnit" />
     </history-entry>
@@ -680,9 +669,18 @@
     <history-entry file="Connect4Should - 2018.10.25 at 15h 06m 39s.xml">
       <configuration name="Connect4Should" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="Connect4Should - 2018.10.25 at 15h 08m 42s.xml">
+      <configuration name="Connect4Should" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Connect4Should - 2018.10.25 at 15h 12m 29s.xml">
+      <configuration name="Connect4Should" configurationId="JUnit" />
+    </history-entry>
+    <history-entry file="Connect4Should - 2018.10.25 at 15h 12m 38s.xml">
+      <configuration name="Connect4Should" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7577000" />
+    <option name="totallyTimeSpent" value="8052000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-1" y="0" width="1922" height="1051" extended-state="6" />
@@ -734,17 +732,6 @@
     </ignored-roots>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/GameStatus.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="2" column="21" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
-          <folding>
-            <element signature="e#168#169#0" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Player.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -762,28 +749,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/Connect4Should.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="52" column="11" selection-start-line="52" selection-start-column="11" selection-end-line="52" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Connect4.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="13" column="18" selection-start-line="13" selection-start-column="18" selection-end-line="13" selection-end-column="18" />
-          <folding>
-            <element signature="e#110#111#0" expanded="true" />
-            <element signature="e#133#134#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Column.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="308">
-          <caret line="14" column="30" selection-start-line="14" selection-start-column="30" selection-end-line="14" selection-end-column="30" />
+        <state>
+          <caret column="18" selection-start-column="18" selection-end-column="18" />
           <folding>
             <element signature="e#97#98#0" expanded="true" />
             <element signature="e#138#139#0" expanded="true" />
@@ -791,6 +760,36 @@
             <element signature="e#202#203#0" expanded="true" />
             <element signature="e#219#220#0" expanded="true" />
             <element signature="e#253#254#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/Connect4Should.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="64" column="26" lean-forward="true" selection-start-line="64" selection-start-column="26" selection-end-line="64" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Connect4.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="26" column="52" selection-start-line="26" selection-start-column="52" selection-end-line="26" selection-end-column="52" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#110#111#0" expanded="true" />
+            <element signature="e#133#134#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/GameStatus.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="44">
+          <caret line="2" column="66" selection-start-line="2" selection-start-column="66" selection-end-line="2" selection-end-column="66" />
+          <folding>
+            <element signature="e#168#169#0" expanded="true" />
+            <element signature="e#212#213#0" expanded="true" />
           </folding>
         </state>
       </provider>

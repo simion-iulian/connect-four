@@ -50,7 +50,6 @@ public class Connect4Should {
     assertThat(game.play(0), is("Player 1 has a turn"));
   }
 
-  @Disabled
   @Test
   void give_win_to_player_one_with_4_moves_in_first_column(){
     Connect4 game = new Connect4();
