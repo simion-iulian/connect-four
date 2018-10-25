@@ -3,17 +3,13 @@ public class Game {
   int columnFill = 0;
 
 
-  private String currentStatus() {
-    return String.format(GameStatus.PLAYER_HAS_A_TURN.toString(), player.toString());
-  }
-
-  public String play() {
+  public String play(int column) {
     columnFill++;
     if (columnFill > 6){
-      return "Column full!";
+      return GameStatus.COLUMN_FULL.toString();
     }
     player = player.nextPlayer();
-    return currentStatus();
+    return String.format(GameStatus.PLAYER_HAS_A_TURN.toString(), player.toString());
   }
 
 }

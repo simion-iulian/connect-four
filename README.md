@@ -7,10 +7,12 @@ Your task is to create a Class called Connect4 that has a method called play whi
 ## Rules
 (optative - instruct the programmer what needs to be done)
 * If a player successfully has 4 discs horizontally, vertically or diagonally then you should return "Player n wins!” where n is the current player either 1 or 2.
-* If a player attempts to place a disc in a column that is full then you should return ”Column full!” and the next move must be taken by the same player.
+
+* If a player attempts to place a disc in a column that is full then you should return ”Column full!” and the next move must be taken by the same player. (second - broke into two tests)
+__
 * If the game has been won by a player, any following moves should return ”Game has finished!”. 
 
-* Any other move should return ”Player n has a turn” where n is the current player either 1 or 2.
+* Any other move should return ”Player n has a turn” where n is the current player either 1 or 2. (first)
 
 (indicative - tells the programmer what are the facts of the system) -  (This is more of a spec than a rule) - indicative what's true about the problem - don't describe behavior
 * Player 1 starts the game every time and alternates with player 2.
