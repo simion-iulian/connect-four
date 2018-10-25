@@ -1,10 +1,10 @@
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
 public class Connect4 {
   private Player player = Player.ONE;
   List<Column> columns;
+  Grid grid = new Grid();
 
   public Connect4() {
     columns = Arrays.asList(
@@ -17,15 +17,15 @@ public class Connect4 {
   }
 
   public String play(int column){
-    columns.get(column).putDisc(player);
+    grid.putDiscInColumn(player,column);
 
-    if(columns.get(column).size() > 6 && column == 1){
+    if(grid.columnSizeFor(column) > 6){
       return GameStatus.COLUMN_FULL.toString();
     }
 
     player = player.nextPlayer();
 
-    if(columns.get(0).size() >= 4){
+    if(grid.columnSizeFor(column) >= 4){
       return String.format(GameStatus.PLAYER_HAS_WON.toString(), player.toString());
     }
 
