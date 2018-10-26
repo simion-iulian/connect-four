@@ -11,11 +11,6 @@ public class Grid {
       new Column(), new Column(), new Column());
   }
 
-  int columnSizeFor(int column){
-
-    return columns.get(column).size();
-  }
-
   boolean isColumnFull(int column){
     return columns.get(column).size() == NUMBER_OF_ROWS;
   }

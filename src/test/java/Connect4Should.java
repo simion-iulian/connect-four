@@ -8,32 +8,34 @@ public class Connect4Should {
   @Test
   void return_player_two_has_a_turn_after_player_one_has_played(){
     Connect4 game = new Connect4();
-    assertThat(game.play(1), is("Player 2 has a turn"));
+    GameStatus currentStatus = game.play(1);
+
+    assertThat(currentStatus, is(GameStatus.PLAYER_HAS_A_TURN));
+    assertThat(game.currentPlayer(), is(Player.TWO));
   }
 
   @Test
   void return_player_one_has_a_turn_after_player_two_has_played(){
     Connect4 game = new Connect4();
     game.play(1);
-    assertThat(game.play(1), is("Player 1 has a turn"));
-  }
 
-  @Test
-  void not_allow_play_in_a_full_column(){
-    Connect4 game = new Connect4();
-    for (int i = 0; i < 6; i++) {
-      game.play(1);
-    }
-    assertThat(game.play(1), is("Column full!"));
+    GameStatus gameStatus = game.play(1);
+
+    assertThat(gameStatus, is(GameStatus.PLAYER_HAS_A_TURN));
+    assertThat(game.currentPlayer(), is(Player.ONE));
   }
 
   @Test
   void not_alternate_player_one_when_player_puts_disc_in_full_column(){
     Connect4 game = new Connect4();
+
     for (int i = 0; i < 6; i++) {
       game.play(1);
     }
-    assertThat(game.play(0), is("Player 2 has a turn"));
+    GameStatus gameStatus = game.play(1);
+
+    assertThat(gameStatus, is(GameStatus.COLUMN_FULL));
+    assertThat(game.currentPlayer(), is(Player.ONE));
   }
 
   @Test
@@ -45,7 +47,9 @@ public class Connect4Should {
       game.play(1);
     }
 
-    assertThat(game.play(0), is("Player 1 has a turn"));
+    GameStatus gameStatus = game.play(0);
+    assertThat(gameStatus, is(GameStatus.PLAYER_HAS_A_TURN));
+    assertThat(game.currentPlayer(), is(Player.ONE));
   }
 
   @Test
@@ -58,8 +62,10 @@ public class Connect4Should {
     game.play(1); //2
     game.play(0); //1
     game.play(1); //2
+    GameStatus gameStatus = game.play(0);
 
-    assertThat(game.play(0), is("Player 1 wins!"));
+    assertThat(gameStatus, is(GameStatus.PLAYER_HAS_WON));
+    assertThat(game.currentPlayer(), is(Player.ONE));
   }
 
 
@@ -77,7 +83,9 @@ public class Connect4Should {
     game.play(1); //2
     game.play(0); //1
     game.play(1); //2
+    GameStatus gameStatus = game.play(0);
 
-    assertThat(game.play(0), is("Player 1 wins!"));
+    assertThat(gameStatus, is(GameStatus.PLAYER_HAS_WON));
+    assertThat(game.currentPlayer(), is(Player.ONE));
   }
 }
