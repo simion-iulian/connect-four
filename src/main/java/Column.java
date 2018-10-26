@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class Column {
-  ArrayList<Player> playerMoves;
+  private ArrayList<Player> playerMoves;
 
   Column(){
     playerMoves = new ArrayList<>();
@@ -13,5 +13,15 @@ public class Column {
 
   int size(){
     return playerMoves.size();
+  }
+
+  boolean isPlayerWinning(Player player){
+    int discs = 0;
+    for (Player move : playerMoves) {
+      if(move.equals(player)){
+        discs++;
+      }
+    }
+    return discs == 4;
   }
 }

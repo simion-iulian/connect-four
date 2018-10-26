@@ -17,17 +17,15 @@ public class Connect4 {
   }
 
   public String play(int column){
-    grid.putDiscInColumn(player,column);
-
-    if(grid.columnSizeFor(column) > 6){
+    if(grid.isColumnFull(column)){
       return GameStatus.COLUMN_FULL.toString();
     }
+    grid.putDiscInColumn(player,column);
 
-    player = player.nextPlayer();
-
-    if(grid.columnSizeFor(column) >= 4){
+    if(grid.hasPlayerWon(player)){
       return String.format(GameStatus.PLAYER_HAS_WON.toString(), player.toString());
     }
+    player = player.nextPlayer();
 
     return String.format(GameStatus.PLAYER_HAS_A_TURN.toString(), player.toString());
   }

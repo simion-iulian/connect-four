@@ -54,13 +54,31 @@ public class Connect4Should {
   void give_win_to_player_one_with_4_moves_in_first_column(){
     Connect4 game = new Connect4();
 
-    game.play(0);
-    game.play(1);
-    game.play(0);
-    game.play(1);
-    game.play(0);
-    game.play(1);
-    game.play(0);
+    game.play(0); //1
+    game.play(1); //2
+    game.play(0); //1
+    game.play(1); //2
+    game.play(0); //1
+    game.play(1); //2
+
+    assertThat(game.play(0), is("Player 1 wins!"));
+  }
+
+
+  @Test
+  void give_win_to_player_one_in_first_column_with_one_player_two_disc_in_it(){
+    Connect4 game = new Connect4();
+
+    game.play(1); //1
+
+    game.play(0); //2
+
+    game.play(0); //1
+    game.play(1); //2
+    game.play(0); //1
+    game.play(1); //2
+    game.play(0); //1
+    game.play(1); //2
 
     assertThat(game.play(0), is("Player 1 wins!"));
   }
