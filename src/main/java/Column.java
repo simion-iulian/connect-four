@@ -15,6 +15,8 @@ public class Column {
     return playerMoves.size();
   }
 
+
+
   boolean isPlayerWinningVertically(Player player){
     int discs = 0;
     int resetCounter = -1;

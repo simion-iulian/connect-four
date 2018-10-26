@@ -3,7 +3,17 @@ import java.util.List;
 
 public class Grid {
   private final int NUMBER_OF_ROWS = 6;
+
+  public List<Column> getColumns() {
+    return columns;
+  }
+
   private List<Column> columns;
+
+  public int getLastInsertColumn() {
+    return lastInsertColumn;
+  }
+
   private int lastInsertColumn;
 
   public Grid(){
@@ -22,7 +32,4 @@ public class Grid {
     this.lastInsertColumn = column;
   }
 
-  boolean hasPlayerWon(Player player) {
-    return columns.get(lastInsertColumn).isPlayerWinningVertically(player);
-  }
 }

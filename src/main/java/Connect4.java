@@ -16,12 +16,16 @@ public class Connect4 {
 
     grid.putDiscInColumn(player,column);
 
-    if(grid.hasPlayerWon(player)){
+    if(hasPlayerWon(player)){
       return GameStatus.PLAYER_HAS_WON;
     }
 
     player = player.nextPlayer();
     return GameStatus.PLAYER_HAS_A_TURN;
+  }
+
+  private boolean hasPlayerWon(Player player) {
+    return grid.getColumns().get(grid.getLastInsertColumn()).isPlayerWinningVertically(player);
   }
 }
 
