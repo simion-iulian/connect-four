@@ -16,11 +16,14 @@ public class Column {
   }
 
   boolean isPlayerWinningVertically(Player player){
-    if(playerMoves.size() < 4)
-      return false;
-    int lastDisc = playerMoves.size() - 1;
-    return
-      playerMoves.get(lastDisc) == playerMoves.get(lastDisc - 1) &&
-      playerMoves.get(lastDisc - 2) == playerMoves.get(lastDisc - 3);
+    int discs = 0;
+    int resetCounter = -1;
+    for (Player move : playerMoves) {
+      if(!move.equals(player)) {
+        discs = resetCounter;
+      }
+      discs++;
+    }
+    return discs == 4;
   }
 }
