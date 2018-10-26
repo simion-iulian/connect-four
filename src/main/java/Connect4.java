@@ -8,14 +8,9 @@ public class Connect4 {
   }
 
   private Player player = Player.ONE;
-  List<Column> columns;
-  Grid grid = new Grid();
+  private Grid grid = new Grid();
 
-  public Connect4() {
-    columns = Arrays.asList(
-      new Column(), new Column(), new Column(),
-      new Column(), new Column(), new Column());
-  }
+  public Connect4() { }
 
   public GameStatus play(int column){
     if(grid.isColumnFull(column)){
@@ -29,7 +24,6 @@ public class Connect4 {
     }
 
     player = player.nextPlayer();
-
     return GameStatus.PLAYER_HAS_A_TURN;
   }
 }

@@ -4,6 +4,7 @@ import java.util.List;
 public class Grid {
   private final int NUMBER_OF_ROWS = 6;
   private List<Column> columns;
+  private int lastInsertColumn;
 
   public Grid(){
     columns = Arrays.asList(
@@ -17,9 +18,10 @@ public class Grid {
 
   void putDiscInColumn(Player player, int column){
     columns.get(column).putDisc(player);
+    this.lastInsertColumn = column;
   }
 
-  public boolean hasPlayerWon(Player player) {
-    return columns.get(0).isPlayerWinning(player);
+  boolean hasPlayerWon(Player player) {
+    return columns.get(lastInsertColumn).isPlayerWinning(player);
   }
 }

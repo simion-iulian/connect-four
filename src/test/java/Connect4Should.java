@@ -68,7 +68,6 @@ public class Connect4Should {
     assertThat(game.currentPlayer(), is(Player.ONE));
   }
 
-
   @Test
   void give_win_to_player_one_in_first_column_with_one_player_two_disc_in_it(){
     Connect4 game = new Connect4();
@@ -87,5 +86,37 @@ public class Connect4Should {
 
     assertThat(gameStatus, is(GameStatus.PLAYER_HAS_WON));
     assertThat(game.currentPlayer(), is(Player.ONE));
+  }
+
+  @Test
+  void give_win_to_player_one_with_4_moves_in_third_column(){
+    Connect4 game = new Connect4();
+
+    game.play(2); //1
+    game.play(1); //2
+    game.play(2); //1
+    game.play(1); //2
+    game.play(2); //1
+    game.play(1); //2
+    GameStatus gameStatus = game.play(2); // 1
+
+    assertThat(gameStatus, is(GameStatus.PLAYER_HAS_WON));
+    assertThat(game.currentPlayer(), is(Player.ONE));
+  }
+  @Test
+  void give_win_to_player_two_with_win_with_two_moves_of_player_one_in_the_same_column(){
+    Connect4 game = new Connect4();
+
+    game.play(2); //1
+    game.play(2); //2
+    game.play(1); //1
+    game.play(2); //2
+    game.play(1); //1
+    game.play(2); //2
+    game.play(1); //1
+    GameStatus gameStatus = game.play(2); // 2
+
+    assertThat(gameStatus, is(GameStatus.PLAYER_HAS_WON));
+    assertThat(game.currentPlayer(), is(Player.TWO));
   }
 }
