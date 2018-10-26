@@ -15,11 +15,13 @@ public class Column {
     return playerMoves.size();
   }
 
-  boolean isPlayerWinning(Player player){
+  boolean isPlayerWinningVertically(Player player){
     int discs = 0;
     for (Player move : playerMoves) {
       if(move.equals(player)){
         discs++;
+      } else {
+        discs = 0;
       }
     }
     return discs == 4;

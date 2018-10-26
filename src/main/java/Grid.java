@@ -9,7 +9,8 @@ public class Grid {
   public Grid(){
     columns = Arrays.asList(
       new Column(), new Column(), new Column(),
-      new Column(), new Column(), new Column());
+      new Column(), new Column(), new Column(),
+      new Column());
   }
 
   boolean isColumnFull(int column){
@@ -22,6 +23,6 @@ public class Grid {
   }
 
   boolean hasPlayerWon(Player player) {
-    return columns.get(lastInsertColumn).isPlayerWinning(player);
+    return columns.get(lastInsertColumn).isPlayerWinningVertically(player);
   }
 }
