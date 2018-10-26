@@ -16,7 +16,7 @@ public class Connect4 {
 
     grid.putDiscInColumn(player,column);
 
-    if(hasPlayerWon(player)){
+    if(hasPlayerWon()){
       return GameStatus.PLAYER_HAS_WON;
     }
 
@@ -24,8 +24,21 @@ public class Connect4 {
     return GameStatus.PLAYER_HAS_A_TURN;
   }
 
-  private boolean hasPlayerWon(Player player) {
-    return grid.getColumns().get(grid.getLastInsertColumn()).isPlayerWinningVertically(player);
+  private boolean hasPlayerWon() {
+    return isPlayerWinningVertically();
+  }
+
+  private boolean isPlayerWinningVertically(){
+    int discs = 0;
+    int resetCounter = -1;
+
+    for (Player move : grid.getColumns().get(grid.getLastInsertColumn()).getPlayerMoves()) {
+      if(!move.equals(player)) {
+        discs = resetCounter;
+      }
+      discs++;
+    }
+    return discs == 4;
   }
 }
 

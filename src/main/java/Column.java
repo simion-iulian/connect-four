@@ -1,6 +1,10 @@
 import java.util.ArrayList;
 
 public class Column {
+  public ArrayList<Player> getPlayerMoves() {
+    return playerMoves;
+  }
+
   private ArrayList<Player> playerMoves;
 
   Column(){
