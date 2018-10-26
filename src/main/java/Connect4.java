@@ -12,19 +12,17 @@ public class Connect4 {
       new Column(), new Column(), new Column());
   }
 
-  public Player currentPlayer(){
-    return player;
-  }
-
   public String play(int column){
     if(grid.isColumnFull(column)){
       return GameStatus.COLUMN_FULL.toString();
     }
+
     grid.putDiscInColumn(player,column);
 
     if(grid.hasPlayerWon(player)){
       return String.format(GameStatus.PLAYER_HAS_WON.toString(), player.toString());
     }
+
     player = player.nextPlayer();
 
     return String.format(GameStatus.PLAYER_HAS_A_TURN.toString(), player.toString());

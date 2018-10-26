@@ -33,7 +33,6 @@ public class Connect4Should {
     for (int i = 0; i < 6; i++) {
       game.play(1);
     }
-    assertThat(game.currentPlayer(), is(Player.ONE));
     assertThat(game.play(0), is("Player 2 has a turn"));
   }
 
@@ -46,7 +45,6 @@ public class Connect4Should {
       game.play(1);
     }
 
-    assertThat(game.currentPlayer(), is(Player.TWO));
     assertThat(game.play(0), is("Player 1 has a turn"));
   }
 
